@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.fancy-text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-orange-500;
+}
+
+.link-underline-no-highlight {
+    @apply underline decoration-pink-400 hover:decoration-orange-400 decoration-wavy decoration-2 underline-offset-2 transition ease-in-out;
+}
+
+.link-underline-highlight {
+    @apply underline decoration-orange-400 hover:decoration-pink-400 decoration-wavy decoration-2 underline-offset-2 transition ease-in-out;
+}
+
+.articles li a {
+    @apply px-4 py-2 my-6 bg-slate-500 bg-opacity-10 hover:bg-opacity-20 rounded-xl grid grid-cols-1 transition ease-in-out;
+}
+
+.articles li > a > p {
+    @apply p-3;
+}
+
+.title {
+    @apply text-3xl font-extrabold underline decoration-wavy decoration-orange-500 decoration-2;
+}
+
+.tagline {
+    @apply text-2xl font-bold
+}
+
+.bottom {
+    /* :3c */
+    @apply flex-row hidden lg:grid lg:grid-cols-2 px-2;
+}
+
+.bottom > p {
+    @apply px-2 col-span-1 text-lg p-2 dark:text-slate-400 text-slate-800;
+}
+
+.article p {
+    @apply py-4;
+}
+
+.article h2 {
+    @apply text-3xl font-extrabold font-mono text-center;
+}
+
+.article h3 {
+    @apply text-2xl font-bold font-mono text-center my-4;
+}
+
+.article h2:not(:first-child)::before {
+    @apply block text-center font-mono font-extrabold text-2xl p-6;
+    content: "***";
+}
+
+.article pre {
+    @apply bg-slate-500 bg-opacity-20 rounded-xl p-4 text-xl overflow-scroll my-2;
+}
+
+.article img {
+    @apply mx-auto object-center rounded-xl;
+}
+
+.article table {
+    @apply bg-slate-400 bg-opacity-25 overflow-hidden table-auto rounded-xl mx-auto;
+}
+
+.article table > thead tr:first-child {
+    @apply bg-orange-400 bg-opacity-35 dark:bg-orange-700 dark:bg-opacity-35;
+}
+
+thead, tbody {
+    @apply overflow-x-scroll
+}
+
+.article table td, .article table th {
+    @apply p-3;
+}
+
+.article table tbody tr:nth-child(even) {
+    @apply dark:bg-slate-100 dark:bg-opacity-10 bg-slate-600 bg-opacity-10;
+}
+
+.table-container {
+    @apply overflow-x-scroll;
+}
+
+.article ul, .article ol {
+    @apply my-2;
+}
+
+.article ul {
+    @apply list-disc;
+}
+
+.article ol {
+    @apply list-decimal;
+}
+
+.article code {
+    @apply bg-slate-400 bg-opacity-50 p-1 mx-1 rounded-lg;
+}
+
+.article a {
+    @apply underline decoration-wavy dark:decoration-orange-500 decoration-orange-600;
+}
+
+.article input {
+    @apply mx-1 w-4 h-4 rounded;
+}

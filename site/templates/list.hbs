@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{stylesheet}}" />
+    <title>mlsn</title>
+  </head>
+  <body class="font-mono text-xl p-0 dark:bg-slate-900 bg-slate-200">
+    <header
+      class="bg-gradient-to-b dark:from-slate-950 dark:to-slate-900 from-slate-300 to-slate-200"
+    >
+      <nav
+        class="flex flex-wrap items-center justify-between mx-auto p-5 flex-col md:flex-row text-3xl font-bold"
+      >
+        <a
+          href="/"
+          class="p-3 md:p-2 flex-col dark:text-slate-400 dark:hover:text-slate-300 text-slate-700 hover:text-slate-900 link-underline-no-highlight"
+        >
+          mlsn
+        </a>
+        <a
+          href="/notes"
+          class="p-3 md:p-2 flex dark:text-slate-400 dark:hover:text-slate-300 text-slate-900 hover:text-slate-700 link-underline-highlight"
+          >notes</a
+        >
+      </nav>
+      <h1
+        class="text-center text-4xl md:text-5xl font-extrabold p-4 fancy-text-gradient py-8"
+      >
+        Random assortments of stuff :3
+      </h1>
+      </div>
+    </header>
+    <main
+      class="p-2 mx-auto my-12 dark:text-slate-300 text-slate-900 container grid grid-cols-1 md:grid-cols-2 gap-8 w-full font-medium articles"
+    >
+    <ol class="col-span-2">
+    {{#each article_cards}}
+        <li>{{{this}}}</li>
+    {{/each}}
+    </ol>
+    </main>
+    <footer class="text-center text-sm text-slate-500 m-14 mb-32">
+        <p>Generated: {{generated}}</p>
+    </footer>
+  </body>
+</html>
